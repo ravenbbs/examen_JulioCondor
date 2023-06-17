@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>Sportit</title>
@@ -11,7 +12,7 @@
    <header class="header">
     <nav class="header__nav">
       <img class="nav__img" src="img/logo.svg" alt="logo Sportit">
-      <ul class="nav__cta">
+      <ul class="navbar">
         <li>
           <a href="#">Sports</a>
         </li>
@@ -29,6 +30,11 @@
         </li>
       </ul>
       <span class="nav__contact button">Contact</span>
+      <div class="menu-icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </nav>
    </header>
    <main class="main">
@@ -36,18 +42,19 @@
       <div>
         <img class="presentation__img" src="img/padel-intro.png" alt="Jugador de padel en plena accion">
       </div>
-      <div>
-        <h1>LIVE: Follow the Telcel Huawei Mexico Open 2022 for free </h1>
-        <p>The final Open of the 2022 World Padel Tour season is underway, don't miss out on any of the action!</p>
+      <div class="presentation__content-text">
+        <h1 class="presentation__title">LIVE: Follow the Telcel Huawei Mexico Open 2022 for free </h1>
+        <p class="presentation__paragraph">The final Open of the 2022 World Padel Tour season is underway, don't miss out on any of the action!</p>
         <span class="button">Contact</span>
       </div>
     </section>
     <section class="main__information">
       <h2 class="information__title">What's different between pros?</h2>
-      <p class="information__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet consequat purus sit amet sodales. In faucibus ut nisi eu dignissim. Vestibulum fringilla velit sed tincidunt tincidunt.</p>
+      <p class="information__paragraph">Manage provides all the functionality your
+        teas needs, without the complexity. Our software is tailor-made for modern digital product teams</p>
     </section> 
-    <section class="main__services">
 
+    <section class="main__services">
       <div class="services__section">
         <h3 class="services__title">
           <span class="title__number">01</span>
@@ -72,6 +79,7 @@
         <p class="services__paragraph">Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
       </div>
     </section>
+    
     <section class="main__mural">
       <h2 class="mural__title">Best of the month</h2>
       <div>
@@ -85,18 +93,18 @@
           </p>
         </div>
         <div class="avatar__section">
-          <img class="avatar__img" src="img/avatar-sanyo.png" alt="Avatar sanyo">
+          <img class="avatar__img" src="img/avatar.lebron.png" alt="Avatar Lebron">
           <h3 class="avatar__title">
-            Sanyo
+            Lebron
           </h3>
           <p class="avatar__paragraph">
             Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           </p>
         </div>
         <div class="avatar__section">
-          <img class="avatar__img" src="img/avatar-sanyo.png" alt="Avatar sanyo">
+          <img class="avatar__img" src="img/avatar-navarro.png" alt="Avatar Navarro">
           <h3 class="avatar__title">
-            Sanyo
+            Navarro
           </h3>
           <p class="avatar__paragraph">
             Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -118,11 +126,22 @@
       <div class="section__row">
         <img src="img/logo.svg" alt="logo Sportit">
         <div class="row__cta"> 
-          <a><img src="img/icon-facebook.svg" class="cta" alt="#"></a>
-          <a><img src="img/icon-youtube.svg" class="cta" alt="#"></a>
-          <a><img src="img/icon-twitter.svg" class="cta" alt="#"></a>
-          <a><img src="img/icon-pinterest.svg" class="cta" alt="#"></a>
-          <a><img src="img/icon-instagram.svg" class="cta" alt="#"></a>
+          <div class="social_icon">
+            <div class="container">
+              <a class="btn" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="btn" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a class="btn" href="#">
+                <i class="fab fa-google"></i>
+              </a>
+              <a class="btn" href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+           </div>
+          </div>
         </div>
       </div>
       <div class="section__row">
@@ -172,5 +191,6 @@
       </p>
     </div>
    </footer>
+   <script src="js/hamburger.js"></script>
 </body>
 </html>

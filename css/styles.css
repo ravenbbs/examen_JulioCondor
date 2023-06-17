@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+:root {
+  --main-color-dark: #8b48bf;
+  --main-color-clear: #3cddf3;
+  --variant-very-dark: #232851;
+  --variant-dark: #1e1e26;
+  --variant-clear: #f9f9f9;
+}
+* {
+  font-family: "Be Vietnam Pro", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  outline: none;
+}
+li {
+  list-style: none;
+}
+/* clase designada a todos los botones */
+.button {
+  font-size: 13px;
+  color: var(--variant-clear);
+  display: inline-block;
+  text-align: center;
+  padding: 13px;
+  background-color: var(--main-color-dark);
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+}
+.header {
+  width: 100vw;
+  padding: 50px 40px 0 40px;
+  margin: 0 0 22px 0;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.navbar a {
+  color: var(--variant-very-dark);
+}
+.menu-icon {
+  display: flex;
+}
+.navbar {
+  display: none;
+}
+.nav__contact {
+  display: none;
+}
+/* BURGER MENU */
+.menu-icon {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8px;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s;
+}
+.menu-icon div {
+  display: block;
+  background: #000000;
+  height: 3px;
+  width: 40px;
+  transition: 0.3s;
+}
+.move .line1 {
+  transform: rotate(-45deg) translate(-10px, 5px);
+}
+.move .line2 {
+  opacity: 0;
+}
+.move .line3 {
+  transform: rotate(45deg) translate(-10px, -5px);
+}
+.main {
+  height: auto;
+}
+/* Flex direcion en responsive */
+.main__presentation {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 80px;
+}
+.main__presentation div {
+  width: 100%;
+  max-width: 540px;
+}
+.presentation__img {
+  width: 100%;
+  max-width: 540px;
+}
+.presentation__content-text {
+  text-align: end;
+}
+.presentation__title {
+  color: var(--variant-very-dark);
+  font-size: 50px;
+  line-height: 57px;
+  letter-spacing: -0.035em;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+.presentation__paragraph {
+  line-height: 26px;
+  margin: 0 0 20px 0;
+}
+.main__information {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--main-color-clear);
+  width: 100%;
+  color: var(--variant-clear);
+  padding: 40px 20px;
+}
+.information__title {
+  font-size: 36px;
+  line-height: 41px;
+  font-weight: 700;
+}
+.information__paragraph {
+  padding: 0 6px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.main__services {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 70px 0 70px 30px;
+}
+.services__title {
+  background: rgba(139, 72, 191, 0.3);
+  height: 40px;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+.title__number{
+  background-color: var(--main-color-dark);
+  color: var(--variant-clear);
+  border-radius: 50px;
+  height: 40px;
+  padding: 10px 25px;
+  margin: 0 20px 0 0;
+}
+.services__paragraph{
+  color: #B3B2B7;
+  padding: 0 30px 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* animacion hover redes sociales */
+.btn {
+  display: inline-block;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  color: #3cddf3;
+  overflow: hidden;
+  position: relative;
+}
+.btn i {
+  font-size: 22px;
+  line-height: 2.2;
+  transition: 0.5s linear;
+}
+.btn:hover i {
+  transform: scale(1.2);
+  color: #f1f1f1;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 146%;
+  background: #3cddf3;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before {
+  animation: pounce 2s;
+  top: -10%;
+  left: -10%;
+}
+@keyframes pounce {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+::-webkit-scrollbar {
+  display: none; /*oculta la barra de desplazamiento*/
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+}

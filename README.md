@@ -22,8 +22,6 @@ Su tarea es construir el proyecto con los diseños dentro de la carpeta `/ dise�
 
 El diseño para mobile esta en formato estático JPG. Si desea hacerle cambios esteticos lo puede hacer a su gusto
 
-Se agrega link a Figma [https://www.figma.com/file/iII0s16x1QBl77oSuyXRrg/Frontend-1-Septiembre-22], con la oración anterior se hace referencia de que no siempre se le debe hacer caso a todo lo que nos dice esta herramienta.
-
 Encontrará todos los recursos necesarios en la carpeta `/ imagenes`. Los activos ya están optimizados.
 
 También hay un archivo `style-guide.md` que contiene la información necesaria, como la paleta de colores y las fuentes.
@@ -41,4 +39,3 @@ No dude en utilizar cualquier flujo de trabajo con el que se sienta cómodo. A c
 ## Envío de su solución
 
 Envíe su solución en el google forms adjunto en PG, por favor adjuntar un archivo ZIP.
-
