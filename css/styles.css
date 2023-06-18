@@ -210,6 +210,8 @@ ul {
   padding: 0 6px;
   font-weight: 500;
   line-height: 24px;
+  max-width: 500px;
+  width: 60%;
 }
 
 /* Sección services */
@@ -288,8 +290,6 @@ quedando mitad dentro y la otra fuera del contorno gris claro */
   position: absolute;
   top: -20%;
 }
-
-
 /* Segunda sección main information, aplicados estilos individual a la segunda */
 .main__cta {
   padding: 40px 80px;
@@ -298,7 +298,6 @@ quedando mitad dentro y la otra fuera del contorno gris claro */
   align-items: center;
   text-align: center;
 }
-
 .information__title {
   pad: 0 12px;
   font-weight: 700;
@@ -508,6 +507,7 @@ partes del estilo y para no agregar mas clases, realize el corte
   }
   /* cambio la dirección del contenedor presentation */
   .main__presentation {
+    min-height: 700px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -535,14 +535,14 @@ partes del estilo y para no agregar mas clases, realize el corte
   }
   /* Estilo del information title */
   .information__title {
-    max-width: 400px;
+    max-width: 550px;
     font-size: 36px;
   }
   /* Desactivamos los margenes de la sección services*/
   .main__services{
     margin: 0;
     padding: 50px 12%;
-    background-color: #ffffff;
+    background-color: #FAFAFA;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -569,6 +569,10 @@ partes del estilo y para no agregar mas clases, realize el corte
   /* Aplicamos un margen de separación al titulo de la sección "mural" */
   .mural__title{
     margin: 0 0 20px 0;
+  }
+  .main__mural {
+   min-height: 600px;
+   padding: 80px 0 60px 0;
   }
   /* Es el contenedor de los avatar section, no le puse clase xd */
   .main__mural div{
@@ -631,7 +635,7 @@ partes del estilo y para no agregar mas clases, realize el corte
   .navbar {
     position: relative;
     top: 0px;
-    max-width: 800px;
+    max-width: 600px;
     width: 65%;
     height: auto;
     background: #ffffff;
@@ -640,6 +644,25 @@ partes del estilo y para no agregar mas clases, realize el corte
     justify-content: space-around;
     padding: 0px 0px;
   }
+  .button--clear{
+    background-color: var(--variant-clear);
+    color: var(--main-color-dark);
+   }
+   .button--clear:hover{
+    background-color: var(--main-color-clear);
+    color: var(--variant-dark);
+   }
+   .button--active:hover{
+    box-shadow: none;
+    background-color: #AE7FD3;
+    color: var(--variant-dark);
+   }
+   .box-shadow{
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+   }
+   .paragraph-disable{
+    display: none;
+   }
 }
 
 
