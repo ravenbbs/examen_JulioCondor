@@ -521,6 +521,20 @@ form{
     text-align: end;
     color: #b3b2b7;
   }
+  .navbar {
+    position: relative;
+    top: 0px;
+    max-width: 800px;
+    width: 65%;
+    height: auto;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 0px;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 }
 
 
