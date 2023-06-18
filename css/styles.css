@@ -1,4 +1,6 @@
+/* import el estilo de la fuente (Google Fonts)*/
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+/* root almacena las variables y las dispone para todo el documento */
 :root {
   --main-color-dark: #8b48bf;
   --main-color-clear: #3cddf3;
@@ -6,21 +8,30 @@
   --variant-dark: #1e1e26;
   --variant-clear: #f9f9f9;
 }
+/*oculta la barra de desplazamiento (gusto personal)*/
+::-webkit-scrollbar {
+  display: none; 
+}
+/* Selector universal, colocamos reglas generales para no repetirlas */
 * {
   font-family: "Be Vietnam Pro", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
+/* Quito estilos a todos los enlaces */
 a {
   color: #ffffff;
   text-decoration: none;
-  outline: none;
 }
+/* Quito estilos a todas las listas */
 li {
   list-style: none;
 }
-ul {padding: 0 12px 0 0;}
-/* clase designada a todos los botones */
+/* Cambio el padding por defecto de las ul */
+ul {
+  padding: 0 12px 0 0;
+}
+/* clase designada a ciertos los botones (contact y more) */
 .button {
   font-size: 13px;
   font-weight: 500;
@@ -35,23 +46,29 @@ ul {padding: 0 12px 0 0;}
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+/* Animación Hover a la clase button */
 .button:hover{
   box-shadow: 0px 0px 26px  var(--main-color-dark);
   transform: scale(1.1);
 }
+/* Clase designada a la imagen principal */
 .filter{
   transition: 0.6s ease-in-out;
 }
+/* Animación filter (sombra en el contorno de la imagen) */
 .filter:hover{
   filter: drop-shadow(-1px -2px 22px var(--main-color-dark));
 }
+/* Clase designada a li, logo, e imágenes de la sección "Avatar" */
 .transform{
   transition: 0.4s ease-in-out;
   cursor:none;
 }
+/* Animación que aumenta el tamaño del objeto en una escala del 10% */
 .transform:hover{
   transform: scale(1.1);
 }
+/* Sección header */
 .header {
   width: 100vw;
   padding: 50px 40px 0 40px;
@@ -73,15 +90,16 @@ ul {padding: 0 12px 0 0;}
   transition: 0.3s ease-in-out;
   padding: 2px ;
   border-radius: 4px;
+  font-weight:700 ;
 }
 .navbar li:hover{
-  background-color: var(--main-color-clear);
-  color: var(--variant-dark);
+  transform: scale(1.2);
+  color: var(--main-color-clear);
 }
 .nav__contact {
   display: none;
 }
-/* BURGER MENU */
+/* inicio BURGER MENU */
 .menu-icon {
   flex-direction: column;
   align-items: center;
@@ -113,9 +131,11 @@ ul {padding: 0 12px 0 0;}
 .menu-icon {
   display: flex;
 }
+/* coloca el navbar fuera de la vista */
 .navbar {
   position: absolute;
   top: -100%;
+  right: 0;
   min-width: 200px;
   width: 20vw;
   height: 30vh;
@@ -125,14 +145,19 @@ ul {padding: 0 12px 0 0;}
   align-items: center;
   justify-content: space-around;
   padding: 50px 20px;
-  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.8s all ease;
 }
+/* Regresa el navbar a la vista (función linkeada al js hamburger.js) */
 .open-menu {
   top: 120px;
   right: 0;
-  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.8s all ease;
 }
-/* Flex dirección en responsive */
+/* fin menu hamburger */
+/* final sección header */
+
+/* inicio sección main */
+/* Sección presentation */
 .main__presentation {
   display: flex;
   flex-wrap: wrap;
@@ -141,6 +166,7 @@ ul {padding: 0 12px 0 0;}
   padding: 30px;
   gap: 80px;
 }
+/* width máximo en 540px para que crezca mas de eso */
 .main__presentation div {
   width: 100%;
   max-width: 540px;
@@ -152,6 +178,7 @@ ul {padding: 0 12px 0 0;}
 .presentation__content-text {
   text-align: end;
 }
+/* utilizando propiedades directas del Figma 👌 */
 .presentation__title {
   color: var(--variant-very-dark);
   font-size: 50px;
@@ -164,6 +191,7 @@ ul {padding: 0 12px 0 0;}
   line-height: 26px;
   margin: 0 0 20px 0;
 }
+/* Sección information se repite 2 veces en el main */
 .main__information {
   display: flex;
   flex-direction: column;
@@ -183,12 +211,15 @@ ul {padding: 0 12px 0 0;}
   font-weight: 500;
   line-height: 24px;
 }
+
+/* Sección services */
 .main__services {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin: 70px 0 70px 30px;
 }
+/* animación aplicada a la numeración de los títulos en la sección services */
 .services__section{
   transition: 0.3s ease-in-out;
 }
@@ -216,6 +247,7 @@ ul {padding: 0 12px 0 0;}
   color: #b3b2b7;
   padding: 0 30px 0 10px;
 }
+/* Main mural es la contenedora de la sección "avatar" */
 .main__mural {
   display: flex;
   flex-direction: column;
@@ -231,6 +263,7 @@ ul {padding: 0 12px 0 0;}
   letter-spacing: -0.01em;
   margin: 0 0 90px 0;
 }
+/* sección "avatar" */
 .avatar__section {
   background-color: #fafafa;
   display: flex;
@@ -241,16 +274,23 @@ ul {padding: 0 12px 0 0;}
   position: relative;
   transition: 0.3s ease-in-out;
 }
+/* animación escala 10% en las imágenes de la sección avatar */
 .avatar__section:hover .transform {
   transform: scale(1.2);
 }
+/* Desactivamos 2 sección avatar, según el diseño del Figma (mobile first) */
 .disable {
   display: none;
 }
+/* La imagen del avatar se monta sobre el contorno de la sección, 
+quedando mitad dentro y la otra fuera del contorno gris claro */
 .avatar__img {
   position: absolute;
   top: -20%;
 }
+
+
+/* Segunda sección main information, aplicados estilos individual a la segunda */
 .main__cta {
   padding: 40px 80px;
   display: flex;
@@ -258,6 +298,7 @@ ul {padding: 0 12px 0 0;}
   align-items: center;
   text-align: center;
 }
+
 .information__title {
   pad: 0 12px;
   font-weight: 700;
@@ -265,34 +306,43 @@ ul {padding: 0 12px 0 0;}
   line-height: 48px;
   letter-spacing: -0.005em;
 }
+/* Seleccione la palabra BEST y se le aplica una configuración especial,
+ para que en mobile ocupe una sola linea la palabra */
 .title--active {
   display: block;
   width: 100%;
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
+/* animación a la palabra BEST */
 .title--active:hover {
   color: var(--variant-dark);
 }
+/* button de la segunda sección information */
 .information__button {
   background-color: var(--variant-very-dark);
   font-weight: 500;
 }
+/* animación del button donde aumenta su tamaño un %10
+(comparte clase con .button, en este caso no le quito la sombra
+ ya que es del mismo color que el fondo) */
 .information__button:hover {
-  box-shadow: 0px 0px 0px ;
   transform: scale(1.2);
 }
+/* inicio de la sección Footer */
 .footer {
   background-color: var(--variant-dark);
   padding: 50px;
 }
+/* Sección footer contenedora de las partes del footer, esta en reverse ya que maquete desde la vista  del Desktop,
+entonces en mobile se requiere colocarlas en reverse */
 .footer__section {
   display: flex;
-  flex-direction: column;
   flex-direction: column-reverse;
   align-items: center;
   gap: 25px;
 }
+/* contenedores de las partes del foooter (Las listas ul y el form) */
 .section__row {
   width: 100%;
   display: flex;
@@ -300,30 +350,23 @@ ul {padding: 0 12px 0 0;}
   justify-content: space-evenly;
   max-width: 600px;
 }
-.section__column {
-  display: flex;
-  width: 100%;
-  flex-direction: column-reverse;
-  align-items: center;
+/* estilos a las listas, específicos no le puse clase xd */
+.section__row li {
+  margin: 0 0 12px 0;
 }
-.row__cta {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
+.section__row li a {
+  transition: 0.3s ease-out;
 }
-.logo__footer {
-  width: 200px;
+/* animacion a los enlaces del footer */
+.section__row li a:hover {
+  color: var(--main-color-clear);
 }
-.container {
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  justify-content: space-around;
-}
+/* EL form contenido por el section row ya tiene máximo especificado */
 form{
   width: 100%;
   text-align: center;
 }
+/*estilos del form email */
 .form__email {
   outline: none;
   width: 70%;
@@ -333,6 +376,7 @@ form{
   border-radius: 50px;
   padding: 12px;
 }
+/*estilos del form submit el "button" GO */
 .form__submit {
   cursor: pointer;
   width: 70px;
@@ -341,20 +385,39 @@ form{
   padding: 12px;
   color: var(--variant-clear);
   background-color: var(--main-color-dark);
- 
 }
+/* Animación al button GO */
 .button--hover{
    transition: 0.3s ease-out;
    cursor: cell;
 }
-.section__row li {
-  margin: 0 0 12px 0;
+.button--hover:hover{
+ background-color: var(--main-color-clear);
+ color: var(--variant-dark);
 }
-.section__row li a {
-  transition: 0.3s ease-out;
+/* contenedor del logo y los iconos de las redes sociales */
+.section__column {
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse;
+  align-items: center;
 }
-.section__row li a:hover {
-  color: var(--main-color-clear);
+/* contenedor del logo*/
+.logo__footer {
+  width: 200px;
+}
+/* contenedor de los iconos de las redes sociales */
+.row__cta {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+/* contenedor de los iconos de las redes sociales para la animación */
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
 }
 /* animación hover redes sociales */
 .btn {
@@ -370,6 +433,7 @@ form{
   overflow: hidden;
   position: relative;
 }
+/* estilo y animación de los iconos de FontAwesome */
 .btn i {
   font-size: 28px;
   line-height: 2.2;
@@ -379,6 +443,7 @@ form{
   transform: scale(1.1);
   color: #f1f1f1;
 }
+/* fondo que cubre el fondo original provocando el efecto de "relleno" */
 .btn::before {
   transition: 0.5s linear;
   content: "";
@@ -395,6 +460,7 @@ form{
   top: -10%;
   left: -10%;
 }
+/* la "transition" que lleva el before de abajo izquierda para arriba derecha */
 @keyframes pounce {
   0% {
     left: -110%;
@@ -409,42 +475,46 @@ form{
     left: -10%;
   }
 }
-::-webkit-scrollbar {
-  display: none; /*oculta la barra de desplazamiento*/
-}
+/* final animación redes sociales */
+/* sección copyright */
 .copyright__section {
   color: var(--variant-clear);
   text-align: center;
 }
+/* animación especifica al enlace con mi nombre */
 .copyright__section a {
   transition: 0.4s ease-in-out;
 }
 .copyright__section a:hover {
   color: var(--main-color-clear);
 }
+/* final sección copyright */
+/* Inicio Media, el corte lo preferí en 768px ya que entre medio se desbordan unas
+partes del estilo y para no agregar mas clases, realize el corte 
+(recordatorio que es mobile first, este recorte es a partir
+ de ese tamaño ya que es min-width) */
 @media screen and (min-width: 768px) {
+  /* activamos la sección avatar que se desactivo en mobile first */
   .disable{
     display: inline-block;
   }
-  .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 12px;
-  }
+  /* desactivo el icono hamburger */
   .menu-icon{
     display: none;
   }
+  /* activamos el button contact del header */
   .nav__contact {
     display: block;
   }
+  /* cambio la dirección del contenedor presentation */
   .main__presentation {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
+  /* cambio la dirección del contenedor information, alineado central, cambio del color de fondo
+  padding porcentual */
   .main__information {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -453,42 +523,41 @@ form{
     width: 100%;
     padding: 3% 8%;
   }
+  /* segunda sección information, solo justificamos el contenido  */
   .main__cta {
-    padding: 40px 80px;
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
   }
+  /* "desactivo" que la palabra BEST ocupe toda la linea 
+  (en realidad tenia padding justo para ocupar toda la linea, 
+  aplicando inline se le desactiva) */
   .title--active {
     display: inline;
-    transition: 0.4s ease-in-out;
-    cursor: pointer;
   }
+  /* Estilo del information title */
   .information__title {
     max-width: 400px;
     font-size: 36px;
-    line-height: 41px;
-    font-weight: 700;
   }
+  /* Desactivamos los margenes de la sección services*/
   .main__services{
     margin: 0;
     padding: 50px 12%;
-    background-color: #FAFAFA;
+    background-color: #ffffff;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  /* aplicamos un máximo al width de la sección services */
   .services__section{
     width: 100%;
     max-width: 400px;
     position: relative;
     margin: 0 0 12% 0;
   }
-
   .services__title{
     background-color: #b3b2b700
   }
+  /* Según el Figma los párrafos están separados de la numeración*/
   .services__paragraph {
     display: block;
     min-width: 400px;
@@ -497,9 +566,11 @@ form{
     position: absolute;
     left: 18%;
   }
+  /* Aplicamos un margen de separación al titulo de la sección "mural" */
   .mural__title{
     margin: 0 0 20px 0;
   }
+  /* Es el contenedor de los avatar section, no le puse clase xd */
   .main__mural div{
     display: flex;
     align-items: center;
@@ -507,6 +578,7 @@ form{
     margin: 0;
     gap: 40px;
   }
+  /* re-dimension de los avatar section ya que ahora ocupan 3 todo el espacio y color de fondo */
   .avatar__section {
     background-color:#FAFAFA;
     display: inline-block;
@@ -514,6 +586,8 @@ form{
     min-height: 250px;
     height: auto;
   }
+  /* Posicionamiento de la imagen avatar, porcentual, ya que a partir del corte
+  se montaba sobre el titulo entre medio de 768px y 1440px */
   .avatar__img {
     position: absolute;
     top: -18%;
@@ -521,31 +595,39 @@ form{
   .avatar__title{
     margin-top: 26px
   }
+  /* Según el Figma en desktop los párrafos tienen color mas opaco */
   .avatar__paragraph {
     color: #b3b2b7;
     margin: 0 0 22px 0;
   }
+  /* re-dimension de la sección footer, cambiamos la dirección a row */
   .footer__section {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 22px;
   }
+  /* Cambio de la justificación del contenido */
   .section__row {
     margin: 0 22px;
     justify-content: space-between;
   }
+  /* cambio de la sección que contenía el logo y las redes sociales
+   (flex direction column reverse a column)*/
   .section__column {
     flex-direction: column;
     gap: 42px;
   }
+  /* Alineo el formulario a la derecha porque estaba centrado y no se veía bien */
   form{
     text-align: end;
   } 
+  /* según el Figma esta posicionado a la derecha todo el texto en conjunto */
   .copyright__section{
     text-align: end;
     color: #b3b2b7;
   }
+  /* "Reestilado" de la navbar ya que estaba posicionada fuera de la vista*/
   .navbar {
     position: relative;
     top: 0px;
@@ -555,10 +637,8 @@ form{
     background: #ffffff;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     padding: 0px 0px;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 
