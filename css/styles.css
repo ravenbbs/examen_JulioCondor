@@ -211,7 +211,7 @@ ul {
   font-weight: 500;
   line-height: 24px;
   max-width: 500px;
-  width: 60%;
+  width: 80%;
 }
 /* Sección services */
 .main__services {
@@ -410,7 +410,7 @@ form {
 /* contenedor del logo*/
 .logo__footer {
   width: 200px;
-  margin: 0 0 12px 0;
+  margin: 42px 0 42px 0;
 }
 /* contenedor de los iconos de las redes sociales */
 .row__cta {
@@ -483,11 +483,14 @@ form {
 /* final animación redes sociales */
 /* sección copyright */
 .copyright__section {
-  color: var(--variant-clear);
+
+  color: #b3b2b7;
   text-align: center;
 }
 /* animación especifica al enlace con mi nombre */
 .copyright__section a {
+  display: block;
+  width: 100%;
   transition: 0.4s ease-in-out;
 }
 .copyright__section a:hover {
@@ -559,7 +562,7 @@ partes del estilo y para no agregar mas clases, realize el corte
   }
   /* Estilo del information title */
   .information__title {
-    max-width: 550px;
+    max-width: 400px;
     font-size: 36px;
   }
   /* boton go for it en desktop es diferente */
@@ -677,8 +680,12 @@ partes del estilo y para no agregar mas clases, realize el corte
 
   /* inicio sección footer */
   .footer {
+    padding: 60px 10px 30px 10px;
     width: 100%;
     min-height: 140px;
+  }
+  .logo__footer {
+    margin: 0;
   }
   /* re-dimension de la sección footer, cambiamos la dirección a row */
   .footer__section {
