@@ -10,7 +10,7 @@
 }
 /*oculta la barra de desplazamiento (gusto personal)*/
 ::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 /* Selector universal, colocamos reglas generales para no repetirlas */
 * {
@@ -47,25 +47,25 @@ ul {
   transition: 0.3s ease-in-out;
 }
 /* Animación Hover a la clase button */
-.button:hover{
-  box-shadow: 0px 0px 26px  var(--main-color-dark);
+.button:hover {
+  box-shadow: 0px 0px 26px var(--main-color-dark);
   transform: scale(1.1);
 }
 /* Clase designada a la imagen principal */
-.filter{
+.filter {
   transition: 0.6s ease-in-out;
 }
 /* Animación filter (sombra en el contorno de la imagen) */
-.filter:hover{
+.filter:hover {
   filter: drop-shadow(-1px -2px 22px var(--main-color-dark));
 }
 /* Clase designada a li, logo, e imágenes de la sección "Avatar" */
-.transform{
+.transform {
   transition: 0.4s ease-in-out;
-  cursor:none;
+  cursor: none;
 }
 /* Animación que aumenta el tamaño del objeto en una escala del 10% */
-.transform:hover{
+.transform:hover {
   transform: scale(1.1);
 }
 /*Inicio Sección header */
@@ -86,13 +86,13 @@ ul {
 .menu-icon {
   display: flex;
 }
-.navbar li{
+.navbar li {
   transition: 0.3s ease-in-out;
-  padding: 2px ;
+  padding: 2px;
   border-radius: 4px;
-  font-weight:700 ;
+  font-weight: 700;
 }
-.navbar li:hover{
+.navbar li:hover {
   transform: scale(1.2);
   color: var(--main-color-clear);
 }
@@ -140,7 +140,7 @@ ul {
   min-width: 200px;
   width: 20vw;
   height: 30vh;
-  background: #FAFAFA;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,12 +221,12 @@ ul {
   margin: 60px 0 70px 30px;
 }
 /* animación aplicada a la numeración de los títulos en la sección services */
-.services__section{
+.services__section {
   transition: 0.3s ease-in-out;
 }
-.services__section:hover .button--hover{
+.services__section:hover .button--hover {
   color: var(--variant-dark);
-  background-color: var(--main-color-clear)
+  background-color: var(--main-color-clear);
 }
 .services__title {
   background: rgba(139, 72, 191, 0.3);
@@ -363,14 +363,14 @@ entonces en mobile se requiere colocarlas en reverse */
   color: var(--main-color-clear);
 }
 /* EL form contenido por el section row ya tiene máximo especificado */
-form{
+form {
   width: 100%;
   text-align: center;
 }
 /* Focus al input email */
-.form__email:focus{
+.form__email:focus {
   outline: 3px solid var(--main-color-clear);
- }
+}
 /*estilos del form email */
 .form__email {
   outline: none;
@@ -392,13 +392,13 @@ form{
   background-color: var(--main-color-dark);
 }
 /* Animación al button GO */
-.button--hover{
-   transition: 0.3s ease-out;
-   cursor: cell;
+.button--hover {
+  transition: 0.3s ease-out;
+  cursor: cell;
 }
-.button--hover:hover{
- background-color: var(--main-color-clear);
- color: var(--variant-dark);
+.button--hover:hover {
+  background-color: var(--main-color-clear);
+  color: var(--variant-dark);
 }
 /* contenedor del logo y los iconos de las redes sociales */
 .section__column {
@@ -506,9 +506,9 @@ partes del estilo y para no agregar mas clases, realize el corte
     width: 100vw;
     padding: 5% 14% 0 11%;
     margin: 0 0 22px 0;
-  } 
+  }
   /* desactivo el icono hamburger */
-  .menu-icon{
+  .menu-icon {
     display: none;
   }
   /* "Reestilado" de la navbar ya que estaba posicionada fuera de la vista*/
@@ -528,23 +528,23 @@ partes del estilo y para no agregar mas clases, realize el corte
   .nav__contact {
     display: block;
   }
-   /* sombra del button contact en el header */
-  .box-shadow{
+  /* sombra del button contact en el header */
+  .box-shadow {
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
   }
   /* fin sección header */
   /* inicio sección main */
-/* inicio main presentation */
-/* cambio la dirección del contenedor presentation */
+  /* inicio main presentation */
+  /* cambio la dirección del contenedor presentation */
   .main__presentation {
     min-height: 700px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-/* fin main presentation */
-/* inicio main information */
- 
+  /* fin main presentation */
+  /* inicio main information */
+
   /* cambio la dirección del contenedor information, alineado central, cambio del color de fondo
   padding porcentual */
   .main__information {
@@ -556,22 +556,23 @@ partes del estilo y para no agregar mas clases, realize el corte
     background-color: var(--main-color-dark);
     width: 100%;
     padding: 3% 8%;
-  } 
-   /* Estilo del information title */
+  }
+  /* Estilo del information title */
   .information__title {
     max-width: 550px;
     font-size: 36px;
   }
-   /* boton go for it en desktop es diferente */
-   .information__button{  background-color: var(--variant-clear);
+  /* boton go for it en desktop es diferente */
+  .information__button {
+    background-color: var(--variant-clear);
     color: var(--main-color-dark);
     box-shadow: none;
   }
-   .information__button:hover{
+  .information__button:hover {
     transform: scale(1.2);
     background-color: var(--main-color-clear);
     color: var(--variant-dark);
-   }
+  }
   /* segunda sección information, solo justificamos el contenido  */
   .main__cta {
     min-height: 220px;
@@ -587,14 +588,14 @@ partes del estilo y para no agregar mas clases, realize el corte
     display: inline;
   }
   /* desactivo el párrafo de la segunda sección information, el el Figma son diferentes */
-  .paragraph-disable{
+  .paragraph-disable {
     display: none;
-  } 
-/* fin main information */
- /* inicio main services */
-   /* Desactivamos los margenes de la sección services*/
-  .main__services{
-    background-color: #FAFAFA;
+  }
+  /* fin main information */
+  /* inicio main services */
+  /* Desactivamos los margenes de la sección services*/
+  .main__services {
+    background-color: #fafafa;
     margin: 0;
     padding: 50px 6%;
     flex-direction: row;
@@ -602,15 +603,15 @@ partes del estilo y para no agregar mas clases, realize el corte
     justify-content: space-around;
   }
   /* aplicamos un máximo al width de la sección services */
-  .services__section{
+  .services__section {
     width: 100%;
     max-width: 400px;
     position: relative;
     margin: 0 0 12% 0;
     cursor: cell;
   }
-  .services__title{
-    background-color: #b3b2b700
+  .services__title {
+    background-color: #b3b2b700;
   }
   /* Según el Figma los párrafos están separados de la numeración*/
   .services__paragraph {
@@ -622,30 +623,30 @@ partes del estilo y para no agregar mas clases, realize el corte
     left: 18%;
   }
   /* fin main services */
-/* inicio sección mural (mural contiene avatar) */
-/* Aplicamos un margen de separación al titulo de la sección "mural" */
-  .mural__title{
+  /* inicio sección mural (mural contiene avatar) */
+  /* Aplicamos un margen de separación al titulo de la sección "mural" */
+  .mural__title {
     margin: 0 0 60px 0;
   }
   .main__mural {
-   min-height: 600px;
-   padding: 80px 0 60px 0;
+    min-height: 600px;
+    padding: 80px 0 60px 0;
   }
   /* Es el contenedor de los avatar section, no le puse clase xd */
-  .main__mural div{
+  .main__mural div {
     display: flex;
     align-items: center;
     padding: 0 20px;
     margin: 0;
     gap: 40px;
-  } 
+  }
   /* activamos los avatar sección que no estaban en mobile */
-  .disable{
+  .disable {
     display: inline-block;
   }
   /* re-dimension de los avatar section ya que ahora ocupan 3 todo el espacio y color de fondo */
   .avatar__section {
-    background-color:#FAFAFA;
+    background-color: #fafafa;
     display: inline-block;
     padding: 122px;
     min-height: 250px;
@@ -657,24 +658,24 @@ partes del estilo y para no agregar mas clases, realize el corte
     position: absolute;
     top: -18%;
   }
-  .avatar__title{
-    margin-top: 26px
+  .avatar__title {
+    margin-top: 26px;
   }
   /* Según el Figma en desktop los párrafos tienen color mas opaco */
   .avatar__paragraph {
     color: #b3b2b7;
     margin: 0 0 22px 0;
   }
-   /* button de la sección avatar (según el Figma al presionar es color mas claro) */
-   .button--active:hover{
+  /* button de la sección avatar (según el Figma al presionar es color mas claro) */
+  .button--active:hover {
     box-shadow: none;
-    background-color: #AE7FD3;
+    background-color: #ae7fd3;
     color: var(--variant-dark);
-   }
-/* Fin sección mural (mural contiene avatar) */
-/* fin sección main */
+  }
+  /* Fin sección mural (mural contiene avatar) */
+  /* fin sección main */
 
-/* inicio sección footer */
+  /* inicio sección footer */
   .footer {
     width: 100%;
     min-height: 140px;
@@ -699,17 +700,17 @@ partes del estilo y para no agregar mas clases, realize el corte
     gap: 42px;
   }
   /* Alineo el formulario a la derecha porque estaba centrado y no se veía bien */
-  form{
+  form {
     text-align: end;
-  } 
+  }
   /* contenedor de los iconos de las redes sociales para la animación */
   .container {
     max-width: 260px;
   }
   /* según el Figma esta posicionado a la derecha todo el texto en conjunto */
-  .copyright__section{
+  .copyright__section {
     text-align: end;
     color: #b3b2b7;
   }
- /* fin sección footer */
+  /* fin sección footer */
 }
