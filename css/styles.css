@@ -210,7 +210,7 @@ ul {
   padding: 0 6px;
   font-weight: 500;
   line-height: 24px;
-  max-width: 500px;
+  max-width: 480px;
   width: 80%;
 }
 /* Sección services */
@@ -288,6 +288,10 @@ quedando mitad dentro y la otra fuera del contorno gris claro */
 .avatar__img {
   position: absolute;
   top: -20%;
+}
+.avatar__paragraph{
+  line-height: 156.6%;
+  text-align: center;
 }
 /* Segunda sección main information, aplicados estilos individual a la segunda */
 .main__cta {
@@ -409,7 +413,7 @@ form {
 }
 /* contenedor del logo*/
 .logo__footer {
-  width: 200px;
+  width: 140px;
   margin: 42px 0 42px 0;
 }
 /* contenedor de los iconos de las redes sociales */
@@ -562,6 +566,7 @@ partes del estilo y para no agregar mas clases, realize el corte
   }
   /* Estilo del information title */
   .information__title {
+    text-align: left;
     max-width: 400px;
     font-size: 36px;
   }
@@ -716,6 +721,7 @@ partes del estilo y para no agregar mas clases, realize el corte
   }
   /* según el Figma esta posicionado a la derecha todo el texto en conjunto */
   .copyright__section {
+    padding-right: 20px;
     text-align: end;
     color: #b3b2b7;
   }
