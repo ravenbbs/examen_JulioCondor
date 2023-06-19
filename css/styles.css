@@ -167,19 +167,18 @@ ul {
   gap: 80px;
 }
 /* width máximo en 540px para que crezca mas de eso */
-.main__presentation div {
-  width: 100%;
-  max-width: 540px;
-}
 .presentation__img {
   width: 100%;
   max-width: 540px;
 }
 .presentation__content-text {
+  width: 100%;
+  max-width: 500px;
   text-align: end;
 }
 /* utilizando propiedades directas del Figma 👌 */
 .presentation__title {
+  max-width: 500px;
   color: var(--variant-very-dark);
   font-size: 50px;
   line-height: 57px;
@@ -289,7 +288,7 @@ quedando mitad dentro y la otra fuera del contorno gris claro */
   position: absolute;
   top: -20%;
 }
-.avatar__paragraph{
+.avatar__paragraph {
   line-height: 156.6%;
   text-align: center;
 }
@@ -352,7 +351,7 @@ entonces en mobile se requiere colocarlas en reverse */
   width: 100%;
   display: flex;
   gap: 12px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   max-width: 600px;
 }
 /* estilos a las listas, específicos no le puse clase xd */
@@ -487,7 +486,6 @@ form {
 /* final animación redes sociales */
 /* sección copyright */
 .copyright__section {
-
   color: #b3b2b7;
   text-align: center;
 }
@@ -567,9 +565,16 @@ partes del estilo y para no agregar mas clases, realize el corte
   /* Estilo del information title */
   .information__title {
     text-align: left;
-    max-width: 400px;
+    max-width: 500px;
     font-size: 36px;
   }
+  /* Estilo del information title */
+  .information__title--second {
+    text-align: left;
+    max-width: 450px;
+    font-size: 36px;
+  }
+
   /* boton go for it en desktop es diferente */
   .information__button {
     background-color: var(--variant-clear);
